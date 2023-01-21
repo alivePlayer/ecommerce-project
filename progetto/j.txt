@@ -1,0 +1,6 @@
+carrello link 
+https://www.bootdey.com/snippets/view/bs4-shop-cart
+login
+https://www.bootdey.com/snippets/view/Login-form-with-icon
+signup
+https://www.bootdey.com/snippets/view/Form-register-inside-narrow-jumbotron
