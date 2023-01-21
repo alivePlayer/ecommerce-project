@@ -1,0 +1,141 @@
+
+
+
+<!-- barra navigazione-->
+
+<body>
+  <ng-container *ngIf="!logged">
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:black; color: whitesmoke;">
+      <a class="navbar-nomeSito h1">TechTime</a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <span href="#" class="nav-link active h4">
+
+            </span>
+          </li>
+        </ul>
+
+
+        <div  class="d-flex" >
+          <input type="text" [(ngModel)]="stringFilter" class="form-control me-2" id=test style="color: black;">
+          <button (click)="filtra()" type=""class="btn btn-outline-succes" style="color: whitesmoke;">
+          Cerca
+        </button>
+        </div>
+        <ul class="navbar-nav">
+
+        </ul>
+
+
+      </div>
+
+  </nav>
+</ng-container>
+</body>
+<!-- fine barra navigazione-->
+
+
+
+
+
+<!-- barra navigazione-->
+
+<body>
+  <ng-container *ngIf="">
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:black; color: whitesmoke;">
+      <a class="navbar-nomeSito h1">TechTime</a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <span href="#" class="nav-link active h4">
+
+            </span>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a href="#" routerLink="/carrello" class="nav-link active h4">
+              Carrello
+            </a>
+          </li>
+        </ul>
+
+        <div  class="d-flex" >
+          <input type="text" [(ngModel)]="stringFilter" class="form-control me-2" id=test style="color: black;">
+          <button (click)="filtra()" type=""class="btn btn-outline-succes" style="color: whitesmoke;">
+          Cerca
+        </button>
+        </div>
+        <ul class="navbar-nav">
+
+        </ul>
+
+
+      </div>
+
+  </nav>
+</ng-container>
+</body>
+<!-- fine barra navigazione-->
+
+<app-user-login></app-user-login>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<div class="container">
+    <div class="row clearfix">
+      <!--oggetti-->
+      <ng-container  *ngIf="!boolFilter">
+        <div *ngFor="let oggetto of oggetti " class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card product">
+                <div class="body">
+                    <div class="cp_img">
+                        <img src="{{oggetto?.imageUrl}}" alt="Product" class="img-fluid">
+                            <a href="javascript:void(0);" class="btn btn-primary btn-sm waves-effect"><i class="zmdi zmdi-shopping-cart"></i></a>
+                    </div>
+                    <div class="product_details">
+                        <h5>{{oggetto?.name}}</h5>
+                        <ul class="product_price list-unstyled">
+                            <li class="new_price">€{{oggetto?.prezzo}}</li>
+                        </ul>
+                        <ul class="product_price list-unstyled">
+                          <li class="old_price">{{oggetto?.descrizione}}</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </ng-container>
+
+      <ng-container  *ngIf="boolFilter">
+        <div *ngFor="let oggetto of oggettiFiltrati " class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card product">
+                <div class="body">
+                    <div class="cp_img">
+                        <img src="{{oggetto?.imageUrl}}" alt="Product" class="img-fluid">
+                            <a href="javascript:void(0);" class="btn btn-primary btn-sm waves-effect"><i class="zmdi zmdi-shopping-cart"></i></a>
+                    </div>
+                    <div class="product_details">
+                        <h5>{{oggetto?.name}}</h5>
+                        <ul class="product_price list-unstyled">
+                            <li class="new_price">€{{oggetto?.prezzo}}</li>
+                        </ul>
+                        <ul class="product_price list-unstyled">
+                          <li class="old_price">{{oggetto?.descrizione}}</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+<!-- fine oggetti-->
+
+
+
+

@@ -1,0 +1,21 @@
+
+<div class="d-flex" *ngIf="!haLoggato">
+
+  <form (ngSubmit)="userLogin()">
+    <div class="d-flex">
+
+      <label for ="exampleFormControllInput1" class="form-label h4">Mail</label>
+      <input type="text" [(ngModel)]="user.userId"  class="form-control" id="userId" name="userId">
+      <label for ="exampleFormControllInput1" class="form-label h4 ">     Password</label>
+      <input type="password" [(ngModel)]="user.password" class="form-control" id="password" name="password">
+      <button (click)="setSession()"  type="submit" class="btn btn-primary">Login </button>
+      <a type="button" routerLink="/registrati" class="btn btn-primary">Registrati</a>
+
+  </div>
+  </form>
+
+</div>
+
+<ng-container  *ngIf="haLoggato">
+  <button  (click)="userLogout()" (click)="setSession()"  type="submit" class="btn btn-primary">Logout</button>
+</ng-container>
